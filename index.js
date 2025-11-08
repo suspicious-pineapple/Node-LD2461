@@ -49,6 +49,16 @@ const serial = new SerialPort({path: "COM6",baudRate:19200});
 
 let targets = [];
 
+class Target {
+    constructor(x,y){
+    this.x = x;
+    this.y = y;
+    this.present = 1;
+
+    }
+}
+
+
 let buffer = [];
 let currentPacket = [];
 let packetLength = 0;
@@ -96,8 +106,8 @@ function sendCommand(commandword, dataword){
     cmdBuffer[3]=0x00;
     cmdBuffer[4]=0x02;
     cmdBuffer[5]=0x02;
-    cmdBuffer[6]=0x03;
-    cmdBuffer[7]=0x05;
+    cmdBuffer[6]=0x01;
+    cmdBuffer[7]=0x03;
     cmdBuffer[8]=0xDD;
     cmdBuffer[9]=0xEE;
     cmdBuffer[10]=0xFF;

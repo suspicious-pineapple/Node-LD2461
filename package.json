@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "how do i even use npm?",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/suspicious-pineapple/Node-LD2461/issues"
   },
-  "homepage": "https://github.com/suspicious-pineapple/Node-LD2461#readme"
+  "homepage": "https://github.com/suspicious-pineapple/Node-LD2461#readme",
+  "dependencies": {
+    "serialport": "^13.0.0"
+  }
 }
